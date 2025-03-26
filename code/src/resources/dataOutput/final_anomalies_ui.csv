@@ -1,0 +1,62 @@
+IdentifierValue,ValidationMessages
+ID-000462,HedgeHorizon is not in yyyy-mm-dd format
+ID-001038,HedgeHorizon is not in yyyy-mm-dd format
+ID-001135,"HedgedRisk is 11 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-001870,"IdentifierType is 'INTERNAL' which is not in ['CUSIP', 'ISIN', 'SEDOL', 'Internal']
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-002004,"HedgedRisk is 5 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-002164,HedgeHorizon is not in yyyy-mm-dd format
+ID-002166,"HedgedRisk is 7 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-002415,HedgeHorizon is not in yyyy-mm-dd format
+ID-002817,"HedgedRisk is 7 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-003957,"HedgedRisk is 5 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-004273,"HedgedRisk is 9 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-004640,"HedgedRisk is 6 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-005322,"HedgedRisk is 10 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-006056,"IdentifierType is 'INTERNAL' which is not in ['CUSIP', 'ISIN', 'SEDOL', 'Internal']
+HedgedRisk is 6 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-006295,HedgeHorizon is not in yyyy-mm-dd format
+ID-006382,HedgeHorizon is not in yyyy-mm-dd format
+ID-006493,"IdentifierType is 'INTERNAL' which is not in ['CUSIP', 'ISIN', 'SEDOL', 'Internal']
+HedgedRisk is 11 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-006638,"IdentifierType is 'INTERNAL' which is not in ['CUSIP', 'ISIN', 'SEDOL', 'Internal']
+HedgedRisk is 5 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-006803,"HedgedRisk is 11 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-006859,"HedgedRisk is 5 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-006908,"HedgedRisk is 5 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-007226,"HedgedRisk is 6 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-007293,"AmortizedCost_USDEquivalent is missing or invalid
+HedgedRisk is 6 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-007304,"IdentifierType is 'INTERNAL' which is not in ['CUSIP', 'ISIN', 'SEDOL', 'Internal']
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-007340,"IdentifierType is 'INTERNAL' which is not in ['CUSIP', 'ISIN', 'SEDOL', 'Internal']
+HedgedRisk is 9 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-007554,"IdentifierType is 'INTERNAL' which is not in ['CUSIP', 'ISIN', 'SEDOL', 'Internal']
+HedgedRisk is 7 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-007679,HedgeHorizon is not in yyyy-mm-dd format
+ID-007826,"HedgedRisk is 6 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-007970,"HedgedRisk is 6 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-008170,"HedgedRisk is 7 which is not in [1, 2, 3, 4]
+HedgeHorizon is not in yyyy-mm-dd format"
+ID-009173,"IdentifierType is 'INTERNAL' which is not in ['CUSIP', 'ISIN', 'SEDOL', 'Internal']
+HedgeHorizon is not in yyyy-mm-dd format"

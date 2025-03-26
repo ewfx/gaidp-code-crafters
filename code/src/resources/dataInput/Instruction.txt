@@ -1,0 +1,32 @@
+Instructions
+
+IdentifierType – Must be one of: "CUSIP", "ISIN", "SEDOL", or "Internal".
+
+IdentifierValue – Provide a valid CUSIP, ISIN, SEDOL, or an internal identifier.
+
+AmortizedCost_USDEquivalent – Report as a rounded whole dollar amount.
+
+MarketValue_USDEquivalent – Report as a rounded whole dollar amount.
+
+AccountingIntent – Must be one of: "AFS" (Available-for-Sale), "HTM" (Held-to-Maturity), or "EQ" (Equity Security).
+
+TypeOfHedge – Use "1" for Fair Value Hedge or "2" for Cash Flow Hedge.
+
+HedgedRisk – Use one of the following: "1" for Overall Change in Fair Value or Variability in Cash Flows, "2" for Interest Rate Risk, "3" for Foreign Exchange Risk, "4" for Credit Risk, etc.
+
+HedgeInterestRate – Use "1" for US Treasury, "2" for LIBOR, "3" for Fed Funds, "4" for Other, or "5" for Not Applicable.
+
+HedgePercentage – Provide a decimal value up to four places (e.g., 0.8756).
+
+HedgeHorizon – Report in yyyy-mm-dd format.
+
+HedgedCashFlow – Use "1" for Principal & Interest or "2" for Interest Only, etc.
+
+Sidedness – Use "1" for One-Sided or "2" for Not One-Sided.
+
+HedgingInstrumentAtFairValue – Report as a rounded whole dollar amount.
+
+EffectivePortionOfCumulativeGainsAndLosses – Report as a rounded whole dollar amount.
+
+ASU2017-12HedgeDesignations – Use "1" for Last-of-Layer, "2" for Selected Contractual Cash Flows, or "3" for Not Applicable.
+

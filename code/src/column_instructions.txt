@@ -1,0 +1,15 @@
+IdentifierType: String, The type of identifier for the security. Example: CUSIP, ISIN.
+IdentifierValue: String, The unique value identifying the security. Example: 123456789 (CUSIP), US1234567890 (ISIN).
+AmortizedCost_USDEquivalent: decimal, The amortized cost of the hedged security in USD. Example: 25,000,000.
+MarketValue_USDEquivalent: decimal, The market value of the security in USD. Example: 26,500,000.
+AccountingIntent: String, The classification of the security—Available-for-Sale (AFS), Held-to-Maturity (HTM), or Equity (EQ). Example: AFS.
+TypeOfHedge: integer, Specifies whether the hedge is for fair value or cash flow. Example: 1 (Fair Value Hedge).
+HedgedRisk: integer,The specific risk being hedged, such as interest rate or credit risk. Example: 2 (Interest Rate Risk).
+HedgeInterestRate: decimal, The benchmark interest rate for hedging interest rate risk. Example: 1 (US Treasury Security Interest Rate).
+HedgePercentage: deciaml, The portion of the asset being hedged, expressed as a decimal. Example: 0.75 (75%).
+HedgeHorizon: date, The remaining timeline of the hedge effectiveness or covered transactions. Example: 2027-12-31.
+HedgedCashFlow: integer, Indicates the type of cash flow, e.g., principal, interest, or both. Example: 1 (Principal and Interest Cash Flows).
+Sidedness: integer, Whether the hedging instrument offsets risk one-sidedly. Example: 1 (One-sided).
+HedgingInstrumentAtFairValue: decimal, The USD-equivalent fair value of the hedging instrument. Example: -5,000,000.
+EffectivePortionOfCumulativeGainsAndLosses: decimal, The USD gain/loss related to the hedge. Example: -300,000.
+ASU2017-12HedgeDesignations: integer, Designations under ASU 2017-12, such as "Last-of-Layer." Example: 1 (Last-of-Layer).

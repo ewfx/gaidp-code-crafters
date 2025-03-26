@@ -1,0 +1,138 @@
+You are a python expert. 
+Your task is to generate a Python function to process an anomalies dataset.
+
+The function should:
+
+1. Accept an anomalies dataset in CSV format as input.
+2. Apply pre-defined validation rules directly derived from a list of instructions in a file named sample-inst.txt.
+3. The col-desc.txt file contains descriptions for each field present in the anomalies dataset and is provided for a functional understanding, but should not directly influence the function code.
+
+Requirements:
+
+1. The function should be well-documented with docstrings explaining the purpose and logic of each step.
+2. The validation rules should be pre-coded within the function based on the information provided in sample-inst.txt.
+3. The validation rules once applied on the provided anomalies dataset. And each record once processed, should be updated with all the validation message(s).
+4. Validation message should include the reason for violation of validation of columns.
+5. The function should handle missing values and ensure that the data types are correctly validated.
+6. If a value is missing or invalid, the validation message should indicate this.
+7. If a date value does not follow the specified format (yyyy-mm-dd), it should be considered a validation violation.
+8. Each validation message should be in a new line when adding validation messages.
+9. Name of the generate function should be process_anomalies_dataset, follow the pattern in example code.
+Example validation message:
+1. HedgedRisk is 5 which is not in [1,2,3,4]
+2. HedgedCashFlow is missing
+
+Example Output:
+import pandas as pd
+from datetime import datetime
+
+def process_anomalies_dataset(csv_filepath):
+    """
+    Processes an anomalies dataset, applying validation rules and adding validation messages.
+
+    Args:
+        csv_filepath (str): The path to the CSV file containing the anomalies dataset.
+
+    Returns:
+        pandas.DataFrame: The processed DataFrame with added validation messages. Returns None if there's an error reading the file.
+    """
+    try:
+        df = pd.read_csv(csv_filepath)
+    except FileNotFoundError:
+        return None
+
+    df['ValidationMessages'] = ''
+
+    for index, row in df.iterrows():
+        messages = []
+
+        # Identifier validation
+        if row['Identifier'] not in ["CUSIP", "ISIN", "SEDOL", "Internal"]:
+            messages.append(f"Identifier is '{row['Identifier']}' which is not in ['CUSIP', 'ISIN', 'SEDOL', 'Internal']")
+
+        # Cost_USD validation
+        try:
+            cost = int(float(row['Cost_USD']))
+            if cost != round(cost):
+                messages.append("Cost_USD is not a rounded whole dollar amount")
+        except (ValueError, TypeError):
+            messages.append("Cost_USD is missing or invalid")
+
+        # Intent validation
+        if row['Intent'] not in ["AFS", "HTM", "EQ"]:
+            messages.append(f"Intent is '{row['Intent']}' which is not in ['AFS', 'HTM', 'EQ']")
+
+        # Risk validation
+        try:
+            risk = int(row['Risk'])
+            if risk not in [1, 2, 3, 4]:
+                messages.append(f"Risk is {risk} which is not in [1, 2, 3, 4]")
+        except (ValueError, TypeError):
+            messages.append("Risk is missing or invalid")
+
+        # Horizon validation
+        try:
+            datetime.strptime(row['Horizon'], '%Y-%m-%d')
+        except ValueError:
+            messages.append("Horizon is not in yyyy-mm-dd format")
+        except TypeError:
+            messages.append("Horizon is missing or invalid")
+
+        df.loc[index, 'ValidationMessages'] = '\n'.join(messages)
+
+    return df
+
+Please generate the Python function according to the guidelines above.
+Do not give any comments. I want only code.
+The generated function should work even when the data has missing values, or empty strings.
+Below are the details of the input files:
+Instructions file: sample-inst.txt
+Instructions
+
+IdentifierType – Must be one of: "CUSIP", "ISIN", "SEDOL", or "Internal".
+
+IdentifierValue – Provide a valid CUSIP, ISIN, SEDOL, or an internal identifier.
+
+AmortizedCost_USDEquivalent – Report as a rounded whole dollar amount.
+
+MarketValue_USDEquivalent – Report as a rounded whole dollar amount.
+
+AccountingIntent – Must be one of: "AFS" (Available-for-Sale), "HTM" (Held-to-Maturity), or "EQ" (Equity Security).
+
+TypeOfHedge – Use "1" for Fair Value Hedge or "2" for Cash Flow Hedge.
+
+HedgedRisk – Use one of the following: "1" for Overall Change in Fair Value or Variability in Cash Flows, "2" for Interest Rate Risk, "3" for Foreign Exchange Risk, "4" for Credit Risk, etc.
+
+HedgeInterestRate – Use "1" for US Treasury, "2" for LIBOR, "3" for Fed Funds, "4" for Other, or "5" for Not Applicable.
+
+HedgePercentage – Provide a decimal value up to four places (e.g., 0.8756).
+
+HedgeHorizon – Report in yyyy-mm-dd format.
+
+HedgedCashFlow – Use "1" for Principal & Interest or "2" for Interest Only, etc.
+
+Sidedness – Use "1" for One-Sided or "2" for Not One-Sided.
+
+HedgingInstrumentAtFairValue – Report as a rounded whole dollar amount.
+
+EffectivePortionOfCumulativeGainsAndLosses – Report as a rounded whole dollar amount.
+
+ASU2017-12HedgeDesignations – Use "1" for Last-of-Layer, "2" for Selected Contractual Cash Flows, or "3" for Not Applicable.
+
+
+Column descriptions file: col-desc.txt
+IdentifierType: String, The type of identifier for the security. Example: CUSIP, ISIN.
+IdentifierValue: String, The unique value identifying the security. Example: 123456789 (CUSIP), US1234567890 (ISIN).
+AmortizedCost_USDEquivalent: decimal, The amortized cost of the hedged security in USD. Example: 25,000,000.
+MarketValue_USDEquivalent: decimal, The market value of the security in USD. Example: 26,500,000.
+AccountingIntent: String, The classification of the security—Available-for-Sale (AFS), Held-to-Maturity (HTM), or Equity (EQ). Example: AFS.
+TypeOfHedge: integer, Specifies whether the hedge is for fair value or cash flow. Example: 1 (Fair Value Hedge).
+HedgedRisk: integer,The specific risk being hedged, such as interest rate or credit risk. Example: 2 (Interest Rate Risk).
+HedgeInterestRate: decimal, The benchmark interest rate for hedging interest rate risk. Example: 1 (US Treasury Security Interest Rate).
+HedgePercentage: deciaml, The portion of the asset being hedged, expressed as a decimal. Example: 0.75 (75%).
+HedgeHorizon: date, The remaining timeline of the hedge effectiveness or covered transactions. Example: 2027-12-31.
+HedgedCashFlow: integer, Indicates the type of cash flow, e.g., principal, interest, or both. Example: 1 (Principal and Interest Cash Flows).
+Sidedness: integer, Whether the hedging instrument offsets risk one-sidedly. Example: 1 (One-sided).
+HedgingInstrumentAtFairValue: decimal, The USD-equivalent fair value of the hedging instrument. Example: -5,000,000.
+EffectivePortionOfCumulativeGainsAndLosses: decimal, The USD gain/loss related to the hedge. Example: -300,000.
+ASU2017-12HedgeDesignations: integer, Designations under ASU 2017-12, such as "Last-of-Layer." Example: 1 (Last-of-Layer).
