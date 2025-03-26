@@ -65,6 +65,7 @@ The project implements an end-to-end pipeline for data profiling, anomaly detect
 - The DBSCAN algorithm is used for anomaly detection.
 - If PCA is enabled, dimensionality reduction is applied to retain 90% of the variance.
 - The model is trained on the processed dataset, and predictions are saved to an output file.
+- **DBSCAN is the final model with highest silhoutte score (gives datapoints similarity within clusters) compared to other clustering models such as K-means, etc.**
 
 ### Step 5: Anomaly Verification
 **Objective:** Verify and save the anomalies detected by the model.  
@@ -151,6 +152,6 @@ The project implements an end-to-end pipeline for data profiling, anomaly detect
 - **Himasree** - [GitHub](https://github.com/himaashri) | [LinkedIn](#)
 - **Talveen** - [GitHub](https://github.com/Talveen) | [LinkedIn](https://www.linkedin.com/in/talveenrakhra/)
 - **Subhojit** - [GitHub](https://github.com/subhojit-13) | [LinkedIn](https://www.linkedin.com/in/subhojit-paul/)
-- **Venkat** - [GitHub](#) | [LinkedIn](#)
+- **Venkat** - [GitHub](https://github.com/lokeshdulla) | [LinkedIn](https://www.linkedin.com/in/venkata-lokesh-dulla-0457b19b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - **Naveen** - [GitHub](https://github.com/naveenanem22) | [LinkedIn](https://www.linkedin.com/in/naveenanem-32992b52/)
 ````
