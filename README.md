@@ -101,7 +101,7 @@ The project implements an end-to-end pipeline for data profiling, anomaly detect
 ## 🏃 How to Run
 1. Clone the repository  
    ```sh
-   git clone https://github.com/your-repo.git
+   git clone https://github.com/ewfx/gaidp-code-crafters.git
    ```
 2. Change directory 
    ```sh
