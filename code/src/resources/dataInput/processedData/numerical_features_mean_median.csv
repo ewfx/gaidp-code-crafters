@@ -1,0 +1,11 @@
+Feature,Mean,Median
+AmortizedCost_USDEquivalent,737276.7850344593,670495.33035
+MarketValue_USDEquivalent,518000.96805585775,499052.78615
+TypeOfHedge,1.4965,1.0
+HedgedRisk,5.9633,6.0
+HedgeInterestRate,2.9926,3.0
+HedgedCashFlow,3.4954,3.0
+Sidedness,1.5009,2.0
+HedgingInstrumentAtFairValue,1296036.6660591199,1235667.38
+EffectivePortionOfCumulativeGainsAndLosses,275309.8207150895,258890.55115
+ASU2017-12HedgeDesignations,2.0,2.0
