@@ -31,7 +31,7 @@ This project was inspired by the need to automate and streamline data profiling 
 
 ## ⚙️ What It Does
 The project implements an end-to-end pipeline for data profiling, anomaly detection, and reporting. Below is the detailed step-by-step process:
-
+![SolutionFlowChart](https://github.com/ewfx/gaidp-code-crafters/blob/main/FlowChart.jpeg)
 ### Step 1: Configuration Management
 **Objective:** Centralize all file paths, parameters, and settings for easy management.  
 **Implementation:**  
